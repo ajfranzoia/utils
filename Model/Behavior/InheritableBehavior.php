@@ -140,7 +140,7 @@ class InheritableBehavior extends ModelBehavior {
  * @param Model $Model
  * @return true
  */
-	public function beforeSave(Model $Model, $options = arra()) {
+	public function beforeSave(Model $Model, $options = array()) {
 		if ($this->settings[$Model->alias]['method'] == 'STI') {
 			$this->_singleTableBeforeSave($Model);
 		} elseif ($this->settings[$Model->alias]['method'] == 'CTI') {
